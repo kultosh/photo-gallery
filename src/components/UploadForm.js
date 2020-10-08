@@ -24,16 +24,17 @@ function UploadForm() {
 
 
     return (
-        <div>
             <form>
-                <input type="file" name="upload" onChange={changeHandler} />
+                <label>
+                    <input type="file" name="upload" onChange={changeHandler} />
+                    <span>+</span>
+                </label>
+                <div className="output">
+                    { error && <div>{error}</div> } 
+                    { img && <div>{img.name}</div> }
+                    { img && <ProgressBar file={img} setFile={setImg} /> }
+                </div>
             </form>
-            <div className="output">
-                { error && <div>{error}</div> } 
-                { img && <div>{img.name}</div> }
-                { img && <ProgressBar file={img} setFile={setImg} /> }
-            </div>
-        </div>
     )
 }
 
