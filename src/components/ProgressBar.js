@@ -15,9 +15,9 @@ function ProgressBar({file, setFile}) {
     return (
         
         <div>
-                <div className="progress-bar" style={{ width: progress + '%'}}>
-                    {progress} %
-                </div>
+            <div className="progress-bar" style={{ width: progress + '%'}}>
+                {progress} %
+            </div>
         </div>
     )
 }   
